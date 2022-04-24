@@ -11,13 +11,10 @@ forms = bs.findAll('Form990PartVIISectionAGrp')
 data = []
 for form in forms:
     name = form.find('PersonNm').text
-    #print(name)
 
     position = form.find('TitleTxt').text
-    #print(position)
 
     income = form.find('AverageHoursPerWeekRt').text
-    #print(income)
 
     dict_data={
         'name':name,
